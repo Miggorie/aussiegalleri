@@ -1,0 +1,34 @@
+// ?>
+
+// <?php include('layout/header.php'); ?>
+
+//     <!-- Sidans/Dokumentets huvudsakliga innehåll -->
+//     <div id="content">
+//         <article class="border">
+//             <form method="POST" action="#">
+//                 <fieldset>
+//                     <legend>Logga in</legend>
+
+//                     <?=$message ?>
+                    
+//                     <p>
+//                         <label for="input1">E-post:</label> <br>
+//                         <input type="text" class="text" name="email">
+//                     </p>
+
+//                     <p>
+//                         <label for="input2">Lösenord:</label> <br>
+//                         <input type="password" class="text" name="password">
+//                     </p>
+
+//                     <p>
+//                         <input type="submit" name="doLogin" value="Login">
+//                     </p>
+//                 </fieldset>
+//             </form>
+        
+//             <hr>
+//         </article>
+//     </div>
+
+// <?php include('layout/footer.php'); ?>
