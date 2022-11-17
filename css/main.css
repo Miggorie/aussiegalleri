@@ -1,0 +1,12 @@
+.checkbox-lg .custom-control-label::before,
+.checkbox-lg .custom-control-label::after {
+  top: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.checkbox-lg .custom-control-label {
+  padding-top: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

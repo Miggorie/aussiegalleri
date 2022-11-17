@@ -162,7 +162,7 @@ $litters = $kull->fetchAll();
 
   <script type="text/javascript">
 
-function filterFunction() {
+function filterFuncmesstion() {
   var input, filter, ul, li, a, i;
   input = document.getElementById("litterInput");
   filter = input.value.toUpperCase();
@@ -192,7 +192,7 @@ function filterFunction() {
 
 
 
-<!-- Popup for birthdate-->
+<!-- Popup for Skapa Kull-->
 
 
 
@@ -200,7 +200,7 @@ function filterFunction() {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Skapa kull</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
