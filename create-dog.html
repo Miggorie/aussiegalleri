@@ -8,13 +8,15 @@
 
     <!-- Bootstrap -->
 
-    <link rel="stylesheet" href="css\main.css">
+ 
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css\main.css">
   </head>
   <body>
 
@@ -30,36 +32,36 @@
 
   <form action="" method="POST" class="row g-3">
 <div class="col-md-6">
-  <label for="inputEmail4" class="form-label">Hundens namn</label>
-  <input name="name" type="text" class="form-control" id="inputEmail4">
+  <label for="dogName" class="form-label">Hundens namn</label>
+  <input name="name" type="text" class="form-control" id="dogName">
 </div>
 <div class="col-md-6">
-  <label for="inputPassword4" class="form-label">Registreringsnummer</label>
-  <input name="regnr" type="text" class="form-control" id="inputPassword4">
+  <label for="regNummer" class="form-label">Registreringsnummer</label>
+  <input name="regnr" type="text" class="form-control" id="regNummer">
 </div>
 <div class="col-md-6">
-  <label for="inputPassword4" class="form-label">url</label>
-  <input name="url" type="text" class="form-control" id="inputAddress">
+  <label for="dogUrl" class="form-label">url</label>
+  <input name="url" type="text" class="form-control" id="dogUrl">
 </div>
 <div class="form-group col-md-4">
-  <label for="inputState">Färg</label>
-  <select id="inputState" class="form-control">
+  <label for="dogColor">Färg</label>
+  <select id="dogColor" class="form-control">
     <option selected>Välj...</option>
     <option>...</option>
   </select>
 </div>
 
 <div class="form-group col-md-2">
-  <label for="inputState">Född i...</label>
-  <select id="inputState" class="form-control">
+  <label for="dogBirth">Född i...</label>
+  <select id="dogBirth" class="form-control">
     <option selected>Välj land...</option>
     <option>...</option>
   </select>
 </div>
 
   <div class="form-group col-md-4">
-    <label for="inputState">Svanslängd</label>
-    <select id="inputState" class="form-control">
+    <label for="dogTail">Svanslängd</label>
+    <select id="dogTail" class="form-control">
       <option selected>Välj...</option>
       <option>...</option>
     </select>
@@ -78,11 +80,27 @@
 
 <!-- Sök kull -->
 
-
-<div class="col-md-4">
+<div class="col-md-3">
   <label for="inputEmail4" class="form-label">Sök kull</label>
   <input name="name" type="text" class="form-control" id="inputEmail4">
 </div>
+
+<div class="col-md-3">
+  <label for="inputEmail4" class="form-label">Vald kull</label>
+  <input name="name" type="text" class="form-control" id="inputEmail4" disabled>
+</div>
+
+
+<button type="button" id ="submitDogBtn" class="btn btn-primary">Lägg till hund</button>
+
+</form>
+
+
+
+
+
+
+<!-- TEST -->
 
 
 
@@ -102,7 +120,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-
-    <script scr="create-dog.js"></script>
+    <script src="create-dog.js"></script>
   </body>
 </html>
