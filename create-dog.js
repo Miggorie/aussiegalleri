@@ -34,5 +34,11 @@ function submitDog() {
     console.log("DONE", xhr.readyState);
   };
 
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      document.write("Sucess!", xhr.responseText);
+    }
+  };
+
   xhr.send();
 }
