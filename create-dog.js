@@ -6,6 +6,7 @@ const inputBirth = document.querySelector("#dogBirth");
 const inputColor = document.querySelector("#dogColor");
 const inputCountry = document.querySelector("#dogUrl");
 const submitDogBtn = document.querySelector("#submitDogBtn");
+const createDogForm = document.querySelector("#createDogForm");
 
 // submitDogBtn.addEventListener("click", () => {
 //   let xhr = new XMLHttpRequest();
@@ -19,26 +20,28 @@ loadEventListeners();
 function loadEventListeners() {
   submitDogBtn.addEventListener("click", submitDog);
 
-  // inputTail.addEventListener("click", dogTail);
+  inputTail.addEventListener("click", dogTail);
 }
 
-function submitDog() {
-  let xhr = new XMLHttpRequest();
-  console.log("UNSENT", xhr.readyState);
+let url = "./php/create-dog.php";
 
-  xhr.open("GET", "./message.txt", true);
+fetch(url).then((response) => {
+  console.log(data);
+});
 
-  console.log("OPENED", xhr.readyState);
+// function submitDog() {
+//   let xhr = new XMLHttpRequest();
+//   let method = "POST";
+//   let url = "./php/create-dog.php";
 
-  xhr.onload = () => {
-    console.log("DONE", xhr.readyState);
-  };
+//   xhr.open(method, url);
 
-  xhr.onload = () => {
-    if (xhr.status === 200) {
-      document.write("Sucess!", xhr.responseText);
-    }
-  };
+//   xhr.onload = () => {
+//     if (xhr.status === 200) {
+//       document.querySelector("#result").innerHTML = this.responseText;
+//     }
+//   };
+//   let dogData = new FormData(createDogForm);
 
-  xhr.send();
-}
+//   xhr.send(dogData);
+// }

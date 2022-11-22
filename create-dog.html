@@ -30,7 +30,7 @@
 <div class="ms-3 me-3 form-style">
 <br><h2>Skapa hund</h2><br>
 
-  <form action="" method="POST" class="row g-3">
+  <form id="createDogForm" action="" method="POST" class="row g-3">
 <div class="col-md-6">
   <label for="dogName" class="form-label">Hundens namn</label>
   <input name="name" type="text" class="form-control" id="dogName">
@@ -90,7 +90,7 @@
 
 
   
-<div class="form-group col-md-12">
+<div class="form-group col-md-6">
   <label for="inputEmail4" class="form-label">Sök kull</label>
   <input name="name" type="text" class="form-control" id="inputEmail4">
 </div>
@@ -114,8 +114,10 @@
 
 
 </form>
+</div>
 
-
+<div id="result">
+  <p>content of this DIV will be replaced by the server</p>
 </div>
 
 <!-- TEST -->
