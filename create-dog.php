@@ -86,21 +86,21 @@ $litters = $kull->fetchAll();
     
     <form action="" method="POST" class="row g-3">
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Hundens namn</label>
-    <input name="name" type="text" class="form-control" id="inputEmail4">
+    <label for="dogName" class="form-label">Hundens namn</label>
+    <input name="dogName" type="text" class="form-control" id="dogName">
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Registreringsnummer</label>
-    <input name="regnr" type="text" class="form-control" id="inputPassword4">
+    <label for="dogReg" class="form-label">Registreringsnummer</label>
+    <input name="dogReg" type="text" class="form-control" id="dogReg">
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">url</label>
-    <input name="url" type="text" class="form-control" id="inputAddress">
+    <label for="dogURL" class="form-label">url</label>
+    <input name="dogURL" type="text" class="form-control" id="dogURL">
   </div>
   <div class="col-md-6">
-    <label for="inputState" class="form-label">Färg</label>
-    <select id="inputState" class="form-select">
-    <option selected>Välj...</option>
+    <label for="dogColor" class="form-label">Färg</label>
+    <select id="dogColor" class="form-select">
+    <option name="dogColor" selected>Välj...</option>
     <?php foreach($colors as $color)  {  ?> 
          <option><?=htmlentities($color['colorSwe'])?></option>
       <?php } ?>
@@ -108,8 +108,8 @@ $litters = $kull->fetchAll();
     </div>
 
   <div class="col-md-4">
-    <label for="inputState" class="form-label">Svanslängd</label>
-    <select id="inputState" class="form-select">
+    <label for="dogTail" class="form-label">Svanslängd</label>
+    <select name="dogTail" id="dogTail" class="form-select">
     <option selected>Välj...</option>
     <?php foreach($tails as $tail)  {  ?> 
          <option><?=htmlentities($tail['tailSwe'])?></option>
@@ -118,8 +118,8 @@ $litters = $kull->fetchAll();
   </div>
 
   <div class="col-md-4">
-    <label for="inputState" class="form-label">Kön</label>
-    <select name="isBitch"id="inputPassword4" class="form-select">
+    <label for="isBitch" class="form-label">Kön</label>
+    <select name="isBitch"id="isBitch" class="form-select">
     <option selected>Välj...</option>
       <option>Tik</option>
       <option>Hane</option>
@@ -127,8 +127,8 @@ $litters = $kull->fetchAll();
   </div>
 
   <div class="col-md-4">
-    <label for="inputState" class="form-label">Född i...</label>
-    <select id="inputState" class="form-select">
+    <label for="dogBorn" class="form-label">Född i...</label>
+    <select id="dogBorn" class="form-select">
     <option selected><?=($countries[1]['countrySE']);?></option>
     <?php foreach($countries as $country)  {  ?> 
          <option><?=htmlentities($country['countrySE'])?></option>
@@ -142,25 +142,28 @@ $litters = $kull->fetchAll();
 <!-- Sök kull -->
 
 
-
-
-  <div id="myDropdown" class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Välj Kull
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  <input type="text" name="litterInput" id="litterInput" placeholder="Sök födelsedatum.." onkeyup="filterFunction()">
-  <?php foreach($litters as $litter)  {  ?> 
-         <option class="dropdown-item" name="litterItem"><?=htmlentities($litter['born'])?></option>
-      <?php } ?>
+<div class="d-flex justify-content-start gap-5">
+<div class="col-md-6">
+    <label for="serchLitter" class="form-label">Sök efter kull</label>
+    <input name="serchLitter" type="text" class="form-control" id="serchLitter">  
   </div>
+  <div class="mt-6"id="outputMessage">Sucessmessage</div>
+  <button type="button" style="height: 40px"class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Skapa kull</button>
+
     </div>
+  <div id ="litterOutput">
+        <h5>Föräldrar</h5>
+  <ul class="list-group list-group-flush w-50 p-3">
+  <li class="list-group-item">e. </li>
+  <li class="list-group-item">u.</li>
+</ul>
+  </div>
 
 
 <!-- JAVASCRIPT PART -->
 
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
 
 function filterFuncmesstion() {
   var input, filter, ul, li, a, i;
@@ -178,18 +181,12 @@ function filterFuncmesstion() {
   }
 }
 
-</script>
-  
-
+</script> -->
+   
   <div class="col-12"><br>
     <input name="submitBtn" value="Skapa hund" type="submit" class="btn btn-primary">
   </div>
 </form>
-
-<div class="col-12"><br>
- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Skapa kull</button>
-    </div>
-
 
 
 <!-- Popup for Skapa Kull-->
@@ -233,6 +230,7 @@ function filterFuncmesstion() {
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
 
+<script src="create-dog.php">
 </html>
 
     <?php include('layout/footer.php'); ?> 

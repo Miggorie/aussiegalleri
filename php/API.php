@@ -5,21 +5,34 @@
     $pageId    = "create";
     require('src/dbconnect.php');
 
-// CREATE DOG
+
+
+
+    if(isset($_POST['searchingByFlavour'])) {
+      $search = $_POST['searchByFlavour'];
+      $param = "%$search%";
+      $sql = "
+          SELECT * 
+          FROM products 
+          WHERE flavour LIKE :flavour
+          ORDER BY id DESC
+      ";
+      $stmt = $pdo->prepare($sql);
+      $stmt->bindParam(":flavour", $param);
+      $stmt->execute();
+      $products = $stmt->fetchAll();
+  
+      $data = [
+          'products' => $products
+      ];
+  }
+  
+  echo json_encode($data);
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+    // CREATE DOG
 
 
 
